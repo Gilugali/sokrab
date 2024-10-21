@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../images/sokrab-image-2.jpg");
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.left-section {
+  flex: 1;
+  width: 50%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  /* background: radial-gradient(circle at 20% 90%, rgba(17, 71, 78, 0.6), transparent 40%); */
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(15, 74, 146, 0.9) 15%,
+    rgba(38, 88, 149, 0.8) 40%,
+    rgba(15, 15, 15, 0.01) 80%,
+    transparent 50%
+  );
+}
+.left-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(42, 151, 163, 0.6),
+    transparent 70%
+  );
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1; /* Overlay */
+}
+
+.overlay {
+  position: relative;
+  left: 30%;
+  top: 45%;
+  color: white;
+}
+.overlay img {
+  position: relative;
+  top: 0;
+  left: 60%;
+
+  max-width: 50px;
+}
+.overlay h1 {
+  color: skyblue;
+}
+
+.brand-name {
+  font-size: 120px;
+  color: #6ecf4a;
+  text-align: left;
+  font-style: italic;
+}
+.title {
+  color: #6ecf4a;
+}
+.tag-text {
+  color: skyblue;
+}
+.tagline {
+  font-size: 28px;
+  color: #6ecf4a;
+  text-align: left;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: 0,0,0,10;
+  z-index:1;
+}
+
+.login-form {
+  max-width: 400px;
+  text-align: center;
+  /* position: relative;
+  top: 8%; */
+}
+
+.login-title {
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  transition: transform 0.5s ease; /* Added transition for moving title */
+}
+
+.move-up {
+  transform: translateY(-30px); /* Animation to move the title up */
+}
+
+.additional-fields {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, height 0.5s ease; /* Added transition for the additional fields */
+}
+
+.additional-fields.show {
+  opacity: 1;
+  height: auto; /* Show the fields when class 'show' is added */
+}
+
+.login-form input {
+  width: 80%;
+  padding: 20px;
+  margin: 10px;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  background: #2C3E50;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 15px;
+}
+
+.login-form button {
+  width: 45%;
+  padding:6px;
+  font-size:22px;
+  background: #6ecf4a;
+  border: none;
+  margin: 5px;
+  font-weight: bold;
+  border-radius: 10px;
+  /* background-color:  */
+}
+#icon-arrow{
+  font-size: 20px;
+  margin: 10px;
+}
+
+.signup {
+  color: white;
+  margin-top: 15px;
+}
+.signup a {
+  color: #6ecf4a;
+  cursor: pointer; 
+}
+
+.signup-fields {
+  display: none;
+}
+
+/* New styles integrated */
+.signup-fields .additional-fields {
+  display: block;
+}
